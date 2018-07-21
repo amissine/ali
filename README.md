@@ -90,3 +90,37 @@ The taker's order may (lines 75-77, 79-80) or may not (line 83) be present.
 
 When an order is canceled right after is has been created (lines 86, 87),
 it may not get executed.
+
+And here's and example of Bitstamp order lifecycle:
+```
+order_created order={ order_type: 0,
+  bitstamp   price: 6344.08,
+  bitstamp   datetime: '1530377931',
+  bitstamp   amount: 0.08643278,
+  bitstamp   id: 1768619888,
+  bitstamp   microtimestamp: '1530377931251784' }
+
+order_changed order={ order_type: 0,
+  bitstamp   price: 6344.08,
+  bitstamp   datetime: '1530377931',
+  bitstamp   amount: 0.08389202,
+  bitstamp   id: 1768619888,
+  bitstamp   microtimestamp: '1530377934033720' }
+
+recv msg: [-1,"te",[69378557,1530377934000,-0.00254076,6344.08]]
+
+order_deleted order={ order_type: 0,
+  bitstamp   price: 6344.08,
+  bitstamp   datetime: '1530377931',
+  bitstamp   amount: 0.08389202,
+  bitstamp   id: 1768619888,
+  bitstamp   microtimestamp: '1530377943133631' }
+
+0.08643278-0.00254076=0.08389202
+```
+Order converted to bitfinex format:
+```
+[ 1768619888, 6344.08, 0.08643278 ]
+[ 1768619888, 6344.08, 0.08389202 ]
+[ 1768619888, 0, 1 ]
+```
