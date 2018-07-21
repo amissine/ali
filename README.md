@@ -91,7 +91,7 @@ The taker's order may (lines 75-77, 79-80) or may not (line 83) be present.
 When an order is canceled right after is has been created (lines 86, 87),
 it may not get executed.
 
-And here's and example of Bitstamp order lifecycle:
+And here's an example of Bitstamp order lifecycle:
 ```
 order_created order={ order_type: 0,
   bitstamp   price: 6344.08,
