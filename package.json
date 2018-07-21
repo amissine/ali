@@ -1,0 +1,21 @@
+{
+  "name": "ali",
+  "version": "0.0.0",
+  "description": "Support for crypto token exchange with publicly available APIs",
+  "main": "index.js",
+  "scripts": {
+    "alik-mf": "svc-js-cli init grenache-api-base alik-mf 1331 ../bfx-util-js",
+    "test-alik-mf": "pushd ./alik-mf; npm test; popd",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amissine/ali.git"
+  },
+  "author": "Alec Missine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amissine/ali/issues"
+  },
+  "homepage": "https://github.com/amissine/ali#readme"
+}

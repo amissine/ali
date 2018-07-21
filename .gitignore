@@ -67,3 +67,6 @@ typings/
 
 # Mac OS X
 .DS_Store
+
+# Arbitrage Logistics International Kernel services
+alik-*/
