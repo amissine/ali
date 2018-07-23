@@ -6,7 +6,25 @@
   "scripts": {
     "alik-mf": "svc-js-cli init grenache-api-base alik-mf 1331 ../bfx-util-js",
     "test-alik-mf": "pushd ./alik-mf; npm test; popd",
+    "test-mac-alik-mf": "pushd ./alik-mf/test/mac; npm test; popd",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "bfx-facs-api": "git+https://github.com/bitfinexcom/bfx-facs-api.git",
+    "bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git",
+    "bfx-facs-grc": "git+https://github.com/bitfinexcom/bfx-facs-grc.git",
+    "bfx-facs-interval": "https://github.com/bitfinexcom/bfx-facs-interval.git",
+    "bfx-svc-boot-js": "https://github.com/bitfinexcom/bfx-svc-boot-js.git",
+    "bfx-wrk-api": "git+https://github.com/bitfinexcom/bfx-wrk-api.git",
+    "bfx-wrk-base": "git+https://github.com/bitfinexcom/bfx-wrk-base.git",
+    "grenache-grape": "git+https://github.com/amissine/grenache-grape.git",
+    "lodash": "^4.17.10",
+    "yargs": "^6.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "standard": "^11.0.1"
   },
   "repository": {
     "type": "git",
