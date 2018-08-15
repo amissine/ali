@@ -3,9 +3,33 @@ The Arbitrage Logistics International (ALI) project
 
 ## Contents
 
+ - [Setup](#setup)
  - [ALI Roadmap](#ali-roadmap)
  - [Simulating Trades with SMES](#simulating-trades-with-smes)
  - [Understanding Bitstamp orders and trades](#understanding-bitstamp-orders-and-trades)
+
+ ## Setup
+
+ The following setup has been tested on Ubuntu 16.04 LTS and MacOS 12.3 operating systems.
+
+ 1. Allow _sudoers_ to `sudo` without having to type the password. On MacOS, we assume that you are a member of the _admin_ group and, therefore, a _sudoer_. If this is the case, then, using `sudo visudo`, add/update the following lines:
+ ```
+##
+## User privilege specification
+##
+root ALL=(ALL) ALL 
+%admin  ALL=(ALL) NOPASSWD: ALL 
+```
+On Linux, add the following line
+```
+alec  ALL = NOPASSWD: ALL
+```
+with `sudo vi /etc/sudoers.d/ctl_admins`, having replaced `alec` with your own `username`. Then run `sudo chmod 0440 /etc/sudoers.d/ctl_admins`.
+
+ 2. If you want the box to be a public server, you need the SSH server up and running on the box. On a MacOS box, try [this](http://osxdaily.com/2011/09/30/remote-login-ssh-server-mac-os-x/). Otherwise, run
+```
+sudo apt install openssh-server
+```
 
  ## ALI Roadmap
 
