@@ -31,20 +31,22 @@ with `sudo vi /etc/sudoers.d/ctl_admins`, having replaced `alec` with your own `
 sudo apt install openssh-server
 ```
 
- 3. Install `git`, `curl`, `node` and `npm` with native dev support. On a Linux box, run
+ 3. Install `vim`, `git`, `curl`, `node` and `npm` with native dev support. On a Linux box, run
 ```
-sudo apt install git curl
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim git curl
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install gcc g++ make
 sudo npm i -g npm
 ```
 
- 4. If you have not yet done so, run
+ 4. Clone the ALI project from github. Run
 ```
 git clone https://github.com/amissine/ali.git
 cd ./ali
-sudo -E make
+npm install
 ```
 
  ## ALI Roadmap
