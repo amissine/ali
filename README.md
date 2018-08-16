@@ -10,7 +10,7 @@ The Arbitrage Logistics International (ALI) project
 
  ## Setup
 
- The following setup has been tested on Ubuntu 16.04 LTS and MacOS 12.3 operating systems.
+ The following steps have been tested on Ubuntu 16.04 LTS and MacOS 12.3 operating systems.
 
  1. Allow _sudoers_ to `sudo` without having to type the password. On MacOS, we assume that you are a member of the _admin_ group and, therefore, a _sudoer_. If this is the case, then, using `sudo visudo`, add/update the following lines:
  ```
@@ -29,6 +29,22 @@ with `sudo vi /etc/sudoers.d/ctl_admins`, having replaced `alec` with your own `
  2. If you want the box to be a public server, you need the SSH server up and running on the box. On a MacOS box, try [this](http://osxdaily.com/2011/09/30/remote-login-ssh-server-mac-os-x/). Otherwise, run
 ```
 sudo apt install openssh-server
+```
+
+ 3. Install `git`, `curl`, `node` and `npm` with native dev support. On a Linux box, run
+```
+sudo apt install git curl
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install gcc g++ make
+sudo npm i -g npm
+```
+
+ 4. If you have not yet done so, run
+```
+git clone https://github.com/amissine/ali.git
+cd ./ali
+sudo -E make
 ```
 
  ## ALI Roadmap
