@@ -42,7 +42,7 @@ sudo apt-get install gcc g++ make
 sudo npm i -g npm
 ```
 
- 4. Clone the ALI project from github. Run
+ 4. Clone the ALI project from github, install the dependencies. Run
 ```
 git clone https://github.com/amissine/ali.git
 cd ./ali
@@ -53,7 +53,7 @@ npm install
 
  The goal of the project is to establish infrastructure and to provide tools for automated exchange of crypto tokens using the APIs of the publicly available exchanges. The infrastructure supports individual devices behind routers and does not require any special router configuration. The tools support both paper trading and the real thing. The whole project is open source.
 
- As of today (July 19, 2018), the ALI roadmap steps are as follows:
+ The ALI roadmap steps are as follows:
 
  1. Using public trades and orders from Bitfinex and Bitstamp, build and maintain the order book for each exchange. Add more exchanges to the picture.
 
@@ -64,8 +64,6 @@ npm install
  4. Support individual devices behind routers.
 
  5. Support private trading strategies in the form of pluggable trading bots.
-
- Since I am not in the business of predicting future, I do not associate any dates with these steps. But it'll be huge fun to try and get them done as quickly as possible!
 
  ## Simulating Trades with SMES
 
