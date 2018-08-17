@@ -4,6 +4,7 @@
   "description": "Support for crypto token exchange with publicly available APIs",
   "main": "index.js",
   "scripts": {
+    "postinstall": "./bin/postinstall.sh",
     "alik-mf": "svc-js-cli init grenache-api-base alik-mf 1331 ../bfx-util-js",
     "test-alik-mf": "pushd ./alik-mf; npm test; popd",
     "test-mac-alik-mf": "pushd ./alik-mf/test/mac; npm test; popd",
