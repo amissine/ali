@@ -16,3 +16,4 @@ dieSyntax() { echo "$kTHIS_NAME: ARGUMENT ERROR: ${1:-"Invalid argument(s) speci
 # --- Begin: THE SCRIPT
 
 echo "$kTHIS_NAME started in $PWD, kTHIS_DIR=$kTHIS_DIR"
+make

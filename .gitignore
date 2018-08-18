@@ -70,3 +70,6 @@ typings/
 
 # Arbitrage Logistics International Kernel services
 alik-*/
+
+# Do NOT commit package-lock.json
+package-lock.json
