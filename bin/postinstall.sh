@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 #
 # === .postinstall.sh ===
 # Run after npm is done installing modules.
