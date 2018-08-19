@@ -7,7 +7,7 @@ SHELL := bash
 
 .PHONY: setup
 
-setup: setup.vim setup.ssh
+setup: setup.vim setup.ssh setup.alik-mf
 	@echo "Make goals successful: $^"; rm $^
 	
 setup.vim: $(HOME)/.vimrc $(HOME)/.vim/autoload/pathogen.vim $(HOME)/.vim/bundle.updated
@@ -15,6 +15,15 @@ setup.vim: $(HOME)/.vimrc $(HOME)/.vim/autoload/pathogen.vim $(HOME)/.vim/bundle
 
 setup.ssh: /etc/ssh/ssh_config /etc/ssh/sshd_config
 	@echo $@ > $@
+
+setup.alik-mf: ./alik-mf ./alik-mf.updated
+	@echo $@ > $@
+
+./alik-mf:
+	@[ -d $@ ] || git clone https://github.com/amissine/alik-mf.git
+
+./alik-mf.updated:
+	@pushd alik-mf; git pull --tags origin master; popd
 
 /etc/ssh/ssh_config: ./ssh/ssh_config
 	@sudo cp $< $@; echo "Updated $@ with $< to allow remote port forwarding"

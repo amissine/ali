@@ -8,7 +8,7 @@
     "alik-mf": "svc-js-cli init grenache-api-base alik-mf 1331 ../bfx-util-js",
     "test-alik-mf": "pushd ./alik-mf; npm test; popd",
     "test-mac-alik-mf": "pushd ./alik-mf/test/mac; npm test; popd",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "[ `uname` = 'Linux' ] && npm run test-alik-mf || npm run test-mac-alik-mf"
   },
   "dependencies": {
     "lodash": "^4.17.10",
