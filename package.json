@@ -6,8 +6,8 @@
   "scripts": {
     "postinstall": "./bin/postinstall.sh",
     "alik-mf": "svc-js-cli init grenache-api-base alik-mf 1331 ../bfx-util-js",
-    "test-alik-mf": "pushd ./alik-mf; npm test; popd",
-    "test-alik-mf-remote": "echo 'Remote Linux session'",
+    "test-alik-mf": "echo 'TODO: Local Linux session'",
+    "test-alik-mf-remote": "echo 'TODO: Remote Linux session'",
     "test-mac-alik-mf": "pushd ./alik-mf/test/mac; npm test; popd",
     "test": "[ `uname` = 'Linux' ] && ([ -n \"$SSH_CLIENT\" ] && npm run test-alik-mf-remote || npm run test-alik-mf) || npm run test-mac-alik-mf"
   },
